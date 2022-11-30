@@ -31,14 +31,14 @@ const fetchDetails = async () =>{
  })  }
 
  const getEp = (url, name) => {
-  setLoading3(false)
+  // setLoading3(false)
 setSrc(url) 
 setNp(name)
 
 
 
  
-  setTimeout(() => setLoading3(true) , 500)
+  // setTimeout(() => setLoading3(true) , 100)
 }
 const videoOptions = {
   playerVars: {
@@ -57,7 +57,7 @@ const videoOptions = {
      
     <div  className='productSingle__inner'>
       <div className='embedss'>
-<div className='embed3'>
+<div className='embed3 container'>
     {loading3 ?   <YouTube videoId={src} opts={videoOptions} className='emded2' /> : <></>}</div>
       <div className="details">
       <p>Now Playing: {np}</p>

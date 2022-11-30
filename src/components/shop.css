@@ -90,14 +90,16 @@
     width: 70%;
    
 }
-.embed3{
-    min-height: 600px;
-}
+
 .options {
     width: 35%;
     overflow: scroll;
     height: 100vh;
 }
+iframe {
+    border: 0;
+    width: 100% !important;
+} 
 @media (max-width: 600px){
 
     .single-page {
@@ -118,5 +120,11 @@
     }
     .options{
         width: 100%;
+        overflow: scroll;
+        height: 40vh;
     }
+    
+   
+      
+       
 }
