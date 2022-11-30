@@ -20,8 +20,9 @@ const fetchDetails = async () =>{
 
   await axios(`https://api.10minuteschool.com/lms-auth-service/api/v4/pro/v3/content/course/${params.name}/enrolled`)
  .then(data2 => { const data = data2.data.data
-  console.log(data)
+  console.log(data.steps[0].content_details)
    setDetails(data)
+  //  setSrc(data.steps[0].)
 
   
  
@@ -47,7 +48,7 @@ const fetchDetails = async () =>{
 
 
         </div>
-        
+
        {details?.steps?.map((less) =>{
             return<> <p>{less.content_details.name}            </p>
             <p>            {less?.chapter_content?.map((lss) =>{
