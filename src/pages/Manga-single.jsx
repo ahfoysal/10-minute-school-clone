@@ -9,7 +9,7 @@ const Manga = () => {
   const [details , setDetails] = useState([]);
   const [src , setSrc] = useState('');
   const [np , setNp] = useState('');
-  const [loading3 , setLoading3] = useState(false);
+  const [loading3 , setLoading3] = useState(true);
 
   
 
