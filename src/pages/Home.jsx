@@ -33,9 +33,9 @@ import { TestContext } from "../App";
       {/* <RecentlyUpdated />  */}
    
     <Common />
-    {/* <Air />
-    <List /> 
-    <Movie />  */}
+    <Air />
+    {/* <List />  */}
+    <Movie /> 
    
        
        
