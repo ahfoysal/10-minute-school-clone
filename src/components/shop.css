@@ -76,6 +76,7 @@
     justify-content: center;
     background-color: #f90;
 }
+
 @media (max-width: 600px){
 
     .single-page {
