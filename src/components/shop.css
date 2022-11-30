@@ -88,6 +88,10 @@
 
 .embedss {
     width: 70%;
+   
+}
+.embed3{
+    min-height: 600px;
 }
 .options {
     width: 35%;
