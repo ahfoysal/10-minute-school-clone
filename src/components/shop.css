@@ -76,7 +76,12 @@
     justify-content: center;
     background-color: #f90;
 }
-
+.titles-span {
+    margin: 25px 0px;
+}
+.red{
+    color: #FF0000;
+}
 @media (max-width: 600px){
 
     .single-page {

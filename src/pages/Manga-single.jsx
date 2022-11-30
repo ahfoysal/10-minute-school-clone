@@ -1,4 +1,5 @@
-import { Details, PlayArrow } from '@mui/icons-material';
+
+import PlayArrow from '@mui/icons-material/PlayCircleFilledWhite';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
@@ -66,7 +67,7 @@ setNp(name)
         <Accordion.Header>{less.content_details.name}</Accordion.Header>
         <Accordion.Body>
         {less?.chapter_content?.map((lss, index) =>{
-              return <> {lss?.content_details.file_url && <> <span className={`sub-span ${np === lss?.content_details.name && 'text-danger'}`} onClick={() => getEp(lss?.content_details.file_url, lss?.content_details.name)}> {np === lss?.content_details.name && <PlayArrow /> } {index +1}. {lss?.content_details.name} </span><br /></> } </>
+              return <> {lss?.content_details.file_url && <div className='titles-span'> <span className={`sub-span ${np === lss?.content_details.name && 'red'}`} onClick={() => getEp(lss?.content_details.file_url, lss?.content_details.name)}> {np === lss?.content_details.name && <PlayArrow /> } {index +1}. {lss?.content_details.name} </span><br /></div> } </>
             })}
         </Accordion.Body>
       </Accordion.Item>
