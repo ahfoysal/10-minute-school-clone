@@ -61,8 +61,8 @@ const videoOptions = {
     {loading3 ?   <YouTube videoId={src} opts={videoOptions} className='emded2' /> : <></>}</div>
       <div className="details">
       <p>Now Playing: {np}</p>
-   <p>CLass: {details?.category?.name} </p>
-   <p>Sub: {details?.name} </p>
+   {/* <p>CLass: {details?.category?.name} </p>
+   <p>Sub: {details?.name} </p> */}
 
 </div>
      
