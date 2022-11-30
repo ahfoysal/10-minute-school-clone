@@ -49,7 +49,9 @@
     float: left;
     
 }
-
+.css-ahj2mt-MuiTypography-root{
+    color: black ;
+}
 
 .product__rating {
     color: white;

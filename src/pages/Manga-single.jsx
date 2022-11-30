@@ -3,6 +3,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import YoutubeEmbed from "../components/ytembed";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Manga = () => {
   const [details , setDetails] = useState([]);
@@ -50,15 +55,55 @@ const fetchDetails = async () =>{
 
         </div>
 
+  
+
+
+
+
+
        {details?.steps?.map((less) =>{
-            return<> <p>{less.content_details.name}            </p>
-            <p>            {less?.chapter_content?.map((lss) =>{
+            return<> 
+            
+            
+            
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography> {less.content_details.name} </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography>
+        {less?.chapter_content?.map((lss) =>{
               return <> {lss?.content_details.file_url && <> <span className='text-primary' onClick={() => setSrc(lss?.content_details.file_url)}>{lss?.content_details.name} </span><br /></> } </>
-            })}</p>
+            })}
+ 
+          
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+            
+            
+            
+            
+            
+            <p>       </p>
+            <p>          </p>
 
             
             </>
         })}
+
+
+
+ <div>
+     
+
+     
+    </div>
 
 
        </div>
