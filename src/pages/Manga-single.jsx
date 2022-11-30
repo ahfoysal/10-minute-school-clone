@@ -58,15 +58,15 @@ const fetchDetails = async () =>{
 
        {details?.steps?.map((less, index) =>{
             return<> 
-             <Accordion>
+             <Accordion  defaultActiveKey="0" flush>
 
 
 
-      <Accordion.Item eventKey={index}>
+      <Accordion.Item eventKey={index+1}>
         <Accordion.Header>{less.content_details.name}</Accordion.Header>
         <Accordion.Body>
-        {less?.chapter_content?.map((lss) =>{
-              return <> {lss?.content_details.file_url && <> <span className='text-primary' onClick={() => setSrc(lss?.content_details.file_url)}>{lss?.content_details.name} </span><br /></> } </>
+        {less?.chapter_content?.map((lss, index) =>{
+              return <> {lss?.content_details.file_url && <> <span className='text-danger' onClick={() => setSrc(lss?.content_details.file_url)}>{index +1}. {lss?.content_details.name} </span><br /></> } </>
             })}
         </Accordion.Body>
       </Accordion.Item>
