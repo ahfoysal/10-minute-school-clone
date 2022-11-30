@@ -96,6 +96,11 @@
     overflow: scroll;
     height: 100vh;
 }
+.accordion {
+   
+    --bs-accordion-active-color: #FF0000 !important;
+   
+}
 iframe {
     border: 0;
     width: 100% !important;

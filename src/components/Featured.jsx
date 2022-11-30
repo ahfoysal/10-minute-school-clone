@@ -36,13 +36,13 @@ const getCat = (num, terms) =>{
         <div className="row g-3">
 
 <Splide  options={{
-  perPage    : 6,
+  perPage    : 8,
   gap        : 0,
   pagination : false,
   arrows : true,
   breakpoints: {
     1200: { perPage: 5, gap: 0 },
-    640 : { gap: 0 , perPage: 2},
+    640 : { gap: 0 , perPage: 3},
   },
 }}>
         { pro?.map((product, index) => (
