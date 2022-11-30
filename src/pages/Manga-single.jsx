@@ -34,15 +34,21 @@ const fetchDetails = async () =>{
 
   return (
     <div>
+        <div className='container'>
+    <div className="load-anime">
         <YoutubeEmbed embedId={src}  />
+        </div> </div>
+       
+       <div className='container'>
 
-        <div className="details">
+       <div className="details">
             <p>CLass: {details?.category?.name} </p>
             <p>Sub: {details?.name} </p>
 
 
         </div>
-        {details?.steps?.map((less) =>{
+        
+       {details?.steps?.map((less) =>{
             return<> <p>{less.content_details.name}            </p>
             <p>            {less?.chapter_content?.map((lss) =>{
               return <> {lss?.content_details.file_url && <> <span className='text-primary' onClick={() => setSrc(lss?.content_details.file_url)}>{lss?.content_details.name} </span><br /></> } </>
@@ -52,6 +58,8 @@ const fetchDetails = async () =>{
             </>
         })}
 
+
+       </div>
     </div>
   )
 }
