@@ -11,10 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #191919 !important;
+  background-color: #FFFFFF !important  ;
 }
 p{
-  color: white;
+  color: black;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -22,11 +22,11 @@ code {
 }
 h4{
   font-size: 1rem;
-color: white;
+color: black;
 }
 h3{
   font-size: 1.5rem;
-color: white;
+color: black;
   line-height: 2.5 rem;
   margin: 2rem 0rem;
 }
@@ -313,7 +313,6 @@ line-height: 1.2;
 .top-line{
 
   
-  color: white;
   font-weight: 700;
   font-size: 1rem;
   line-height: 0px;
