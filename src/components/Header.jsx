@@ -38,7 +38,7 @@ const Header = () => {
 
                 
                   <Navbar.Brand ><Link to={'/'}>
-               <h3 className="logo">PewdsAnime</h3>  </Link>  </Navbar.Brand>
+               <h3 className="logo">9/11 School by pewds</h3>  </Link>  </Navbar.Brand>
      
                  </div>
 
