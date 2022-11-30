@@ -31,7 +31,7 @@ const getCat = (num, terms) =>{
   
     return (
 <div  className="single-page">  
-  <p className="top-line">Hsc</p>
+  <p className="top-line">HSC</p>
 <div className="container-fluid bg-trasparent my-4 p-3"  style={{position: "relative"}}>
         <div className="row g-3">
 

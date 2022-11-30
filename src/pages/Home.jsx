@@ -32,7 +32,7 @@ import { TestContext } from "../App";
       <Featured />
       {/* <RecentlyUpdated />  */}
    
-    {/* <Common /> */}
+    <Common />
     {/* <Air />
     <List /> 
     <Movie />  */}

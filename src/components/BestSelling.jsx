@@ -23,45 +23,44 @@ function RecentlyUpdated() {
 
 const getCat = (num, terms) =>{
   setTerm(terms)
-  axios(`https://pewds-anime1-api.herokuapp.com/recent-release?page=1`)
-          .then(data2 => { const data = data2.data
+  axios(`https://api.10minuteschool.com/lms-auth-service/api/v4/pro/v3/content/course/903/enrolled`)
+          .then(data2 => { const data = data2.data.data.other_courses
  
-            // console.log(num);
+            console.log(data);
                setPro(data) })}
   
     return (
 <div  className="single-page">  
-  <p className="top-line">Recenlt Updated</p>
+  <p className="top-line">SSC</p>
 <div className="container-fluid bg-trasparent my-4 p-3"  style={{position: "relative"}}>
         <div className="row g-3">
 
 <Splide  options={{
-  perPage    : 6,
+  perPage    : 8,
   gap        : 0,
   pagination : false,
   arrows : true,
   breakpoints: {
-    1200: { perPage: 4, gap: 0 },
-    640 : { gap: 0 , perPage: 2},
+    1200: { perPage: 5, gap: 0 },
+    640 : { gap: 0 , perPage: 3},
   },
 }}>
-        { pro?.map((product,index) => (
-         <SplideSlide key={index + 1}>
+        { pro?.map((product, index) => (
+         <SplideSlide key={index+1}  >
    
-        <div className="col hp" key={index + 1} onClick={() => addToCart(product)}>
+        <div className="col hp" onClick={() => addToCart(product)}>
       <div className="card h-100 shadow-sm">
   
-            <div>  <Link to={'/anime/'+product.animeId}> 
-            <div className="imgg">    <img src={product.animeImg
+            <div>  <Link to={'/sub/'+product.course_id}> 
+          <img src={product.sqr_img
+
 } className="card-img-top" alt="product.title" />
       
-       <p className="tag"> New Episode  {product.episodeNum }</p></div>
+      
       
         <div className="card-body">
      
-        <p className="product__name">{product.animeTitle } </p>
-
-      
+        <p className="product__name">{product.name }</p>
 
          
           </div>       

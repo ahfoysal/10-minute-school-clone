@@ -31,14 +31,14 @@ const fetchDetails = async () =>{
  })  }
 
  const getEp = (url, name) => {
-  // setLoading3(false)
+  setLoading3(false)
 setSrc(url) 
 setNp(name)
 
 
 
  
-  // setTimeout(() => setLoading3(true) , 100)
+  setTimeout(() => setLoading3(true) , 10)
 }
 const videoOptions = {
   playerVars: {
@@ -110,7 +110,7 @@ const videoOptions = {
             
          </div>
        
-        
+
      
     </div>
   )
