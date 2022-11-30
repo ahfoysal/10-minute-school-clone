@@ -33,8 +33,8 @@ const Header = () => {
             <div>
              {param !== '/' && <button className='border-none header__back' onClick={() => history(-1)}> Back</button>}
             </div>
-                  <div ><Search  />
-                  </div>
+                  {/* <div ><Search  />
+                  </div> */}
 
                 
                   <Navbar.Brand ><Link to={'/'}>
