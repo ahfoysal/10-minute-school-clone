@@ -58,13 +58,8 @@ const videoOptions = {
     <div  className='productSingle__inner'>
       <div className='embedss'>
 <div className='embed3 container'>
-    {loading3 ?   <YouTube videoId={src} opts={videoOptions} className='emded2' /> : <></>}</div>
-      <div className="details">
-      <p>Now Playing: {np}</p>
-   {/* <p>CLass: {details?.category?.name} </p>
-   <p>Sub: {details?.name} </p> */}
-
-</div>
+    {loading3 ?  <> <YouTube videoId={src} opts={videoOptions} className='emded2' />  <p>Now Playing: {np}</p></> : <></>}</div>
+  
      
       </div>
   
