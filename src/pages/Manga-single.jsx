@@ -7,6 +7,7 @@ import Accordion from 'react-bootstrap/Accordion';
 const Manga = () => {
   const [details , setDetails] = useState([]);
   const [src , setSrc] = useState('');
+  const [np , setNp] = useState('');
 
   let params = useParams();
   useEffect(() => {
@@ -16,21 +17,19 @@ const Manga = () => {
   
 const fetchDetails = async () =>{
 
-
-
   await axios(`https://api.10minuteschool.com/lms-auth-service/api/v4/pro/v3/content/course/${params.name}/enrolled`)
  .then(data2 => { const data = data2.data.data
   console.log(data.steps[0])
   setSrc(data.steps[0].chapter_content[0].content_details.file_url)
+  setNp(data.steps[0].chapter_content[0].content_details.name )
    setDetails(data)
-  //  setSrc(data.steps[0].)
 
-  
- 
+ })  }
 
- })  
+ const getEp = (url, name) => {
 
-
+setSrc(url) 
+setNp(name)
 }
 
 
@@ -44,6 +43,7 @@ const fetchDetails = async () =>{
        <div className='container'>
 
        <div className="details">
+        <p>Now Playing: {np}</p>
             <p>CLass: {details?.category?.name} </p>
             <p>Sub: {details?.name} </p>
 
@@ -66,7 +66,7 @@ const fetchDetails = async () =>{
         <Accordion.Header>{less.content_details.name}</Accordion.Header>
         <Accordion.Body>
         {less?.chapter_content?.map((lss, index) =>{
-              return <> {lss?.content_details.file_url && <> <span className='text-danger' onClick={() => setSrc(lss?.content_details.file_url)}>{index +1}. {lss?.content_details.name} </span><br /></> } </>
+              return <> {lss?.content_details.file_url && <> <span className={`${np === lss?.content_details.name && 'text-danger'}`} onClick={() => getEp(lss?.content_details.file_url, lss?.content_details.name)}>{index +1}. {lss?.content_details.name} </span><br /></> } </>
             })}
         </Accordion.Body>
       </Accordion.Item>
